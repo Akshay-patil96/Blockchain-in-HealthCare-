@@ -7,8 +7,6 @@ import {
   Building2, 
   Users, 
   Lock,
-  CheckCircle,
-  Globe
 } from "lucide-react";
 
 const FeaturesSection = () => {
@@ -62,25 +60,25 @@ const FeaturesSection = () => {
       step: "1",
       title: "Create Request",
       description: "Patient submits funding request with medical documentation",
-      icon: FileText
+      emoji: "✍️"
     },
     {
       step: "2", 
       title: "Verification",
       description: "Multi-step verification by admin and hospital staff",
-      icon: CheckCircle
+      emoji: "🕵️"
     },
     {
       step: "3",
       title: "Live Campaign",
       description: "Approved requests go live for public donations",
-      icon: Globe
+      emoji: "🌐"
     },
     {
       step: "4",
       title: "Secure Disbursement", 
       description: "Funds transferred directly to verified hospital",
-      icon: Shield
+      emoji: "🛡️"
     }
   ];
 
@@ -92,12 +90,10 @@ const FeaturesSection = () => {
           <Badge variant="outline" className="mb-4">Platform Features</Badge>
           <h2 className="text-3xl lg:text-5xl font-bold text-center">
              Everything You Need for{" "}
-         <span className="bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent inline-block w-fit">
-         Healthcare Funding
-         </span>
-
-</h2>
-
+             <span className="bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent inline-block w-fit">
+               Healthcare Funding
+             </span>
+          </h2>
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Our comprehensive platform combines the power of blockchain technology with healthcare expertise 
@@ -157,8 +153,9 @@ const FeaturesSection = () => {
                 
                 <Card className="p-6 hover:shadow-medium transition-all duration-300">
                   <div className="space-y-4">
-                    <div className="relative mx-auto w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-                      <step.icon className="h-8 w-8 text-white" />
+                    <div className="relative mx-auto w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg text-2xl">
+                      {/* Emoji inside circle */}
+                      {step.emoji}
                       <div className="absolute -top-2 -right-2 w-6 h-6 bg-background border-2 border-primary rounded-full flex items-center justify-center text-xs font-bold text-primary">
                         {step.step}
                       </div>
